@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Dashboard</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loader_wrapper">
+        <div class="loader">
+            <div class="circle">
+            </div>
+            <div class="circle">
+            </div>
+            <div class="circle">
+            </div>
+        </div>
+        <div class="loading">
+            <div>L</div>
+            <div>o</div>
+            <div>a</div>
+            <div>d</div>
+            <div>i</div>
+            <div>n</div>
+            <div>g</div>
+            <div>.</div>
+            <div>.</div>
+            <div>.</div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <header>
+            <div class="header-wrapper">
+                <h1 class="head-title">
+                    COVID-19 Dashboard 2020
+                </h1>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main-wrapper">
+                <div class="widget global_cases" title="Show world data">
+                    <h2 class="global_cases-title">Global Cases</h2>
+                    <div class="global_cases-current_tests"></div>
+                </div>
+                    <div class="widget map_global" id="map">
+                    <div class="mapLegend">
+                        <button class="nav_options">Options</button>
+                        <ul class="mapLegend_content">
+                            <li><div class="legendMarker markerCases"></div> - Cases</li>
+                            <li><div class="legendMarker markerDeath"></div> - Death</li>
+                            <li><div class="legendMarker markerRecovered"></div> - Recovered</li>
+                        </ul>
+                    </div>
+                    <button class="btn_fullscreen" id="fullscreen"><i class="material-icons">fullscreen</i></button>
+                </div>
+                <div class="widget table_data">
+                    <button class="nav_options">Options</button>
+                    <button class="btn_fullscreen" id="fullscreen"><i class="material-icons">fullscreen</i></button>
+                </div>
+                <div class="widget countries_list">
+                    <h2 class="countries_list-title">Countries List</h2>
+                    <div class="countries_list-options">
+                        <button class="nav_options">Options</button>
+                        <input class="countries_list-input" type="text" placeholder="Type in country" autofocus>
+                        <p class="check_input hide">Invalid country name!</p>
+                        <button class="btn_keyboard"><i class="material-icons">keyboard</i></button>
+                    </div>
+                    <table class="countries_list-table_title">
+                        <tr class="countries_list-table_title-wrapper">
+                            <td class="countries_list-table_title-element" id="countries"  title="Sorting by countries">Countries<i class="material-icons">keyboard_arrow_down</i></td>
+                            <td class="countries_list-table_title-element" id="parameters" title="Sorting by parameters">Parameters<i class="material-icons">keyboard_arrow_down</i></td>
+                        </tr>
+                    </table>
+                    <button class="btn_fullscreen" id="fullscreen"><i class="material-icons">fullscreen</i></button>
+                </div>
+                <div class="widget actual_date">
+                    <div class="date">
+                        <h2 class="actual_date-title">Last updated at</h2>
+                        <div class="actual_date-date"></div>
+                    </div>
+                    
+                    <div class="footer">
+                        <p>Made by 
+                            <a href="https://github.com/Flash9600" target="_blank" class="link">Flash9600</a>,
+                            <a href="https://github.com/prorockk" target="_blank"  class="link">ProRock</a>,
+                            <a href="https://github.com/Lonise" target="_blank" class="link">Lonise</a> 
+                            in 2020
+                        </p>
+                        <a target="_blank" href="https://rs.school/js/"><img class="RSS" src="https://rs.school/images/rs_school_js.svg" alt="RSS"></a>
+                    </div>
+                </div>
+                <div class="widget schedule">
+                    <button class="btn_fullscreen" id="fullscreen"><i class="material-icons">fullscreen</i></button>
+                    <button class="nav_options">Options</button>
+                    <div class="schedule-wrapper">
+                        <canvas class="schedule-canvas"></canvas>
+                    </div>
+                </div>
+                <nav class="options hide">
+                    <table class='options-table'>
+                        <tr>
+                         <td colspan="2" class="option-set active" id="cases">Cases</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="option-set" id="deaths">Deaths</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="option-set" id="recovered">Recovered</td>
+                        </tr>
+                        <tr>
+                            <td class="option-set" id="daily">Daily</td>
+                            <td class="option-set" id="per">Per 100k</td>
+                        </tr>
+                </nav>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
